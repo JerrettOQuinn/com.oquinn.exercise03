@@ -1,22 +1,23 @@
-package com.oquinn.exercise02;
-// Exercise2
+package com.oquinn.exercise03;
+import java.util.Scanner;
 
 /**
- * Created by 008366 on 1/23/2018.
- */
+ * Created by 008366 on 1/31/2018.*/
 public class Main {
     public static void main(String[] args) {
-        int[] temperatures = {45, 29, 10, 22, 41, 28, 3};
-        int[] precipitation = {95, 60, 25, 5, 0, 75, 90};
-        int i = 0;
+        float fahrenheit = 0;
+        Scanner in = new Scanner(System.in);
 
-        while (6 >= i)
-            if (temperatures[i] >= 32 && precipitation[i] > 50) {
-                System.out.println(temperatures[i]);
-                System.out.println(precipitation[i]);
-                i++;
+        while (fahrenheit > -460) {
+            // Collect User Input
+            System.out.println("Enter Fahrenheit: ");
+            fahrenheit = in.nextInt();
 
-            }
+            // Convert Temperature
+            float celsius = ((fahrenheit - 32) * 5) / 9;
 
+            //Output conversion
+            System.out.println("Fahrenheit in Celsius = " + celsius);
+        }
     }
 }
